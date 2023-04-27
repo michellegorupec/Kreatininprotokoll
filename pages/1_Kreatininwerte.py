@@ -10,15 +10,15 @@ import pandas as pd
 import json, os
 from jsonbin import load_key, save_key
 
-# jsonbin_secret=st.secrets["jsonbin"]
+jsonbin_secret = st.secrets["jsonbin"]
 
 jsonbin_secrets = st.secrets["jsonbin"]
 api_key = jsonbin_secrets["api_key"]
 bin_id = jsonbin_secrets["bin_id"]
 
 # Funktion zum Laden der Standards aus einer JSON-Datei
-# def load_data():
-  #  return load_data_jsonbin(jsonbin_secrets["api_key"], jsonbin_secrets["bin_id"])
+def load_data():
+  return load_data_jsonbin(jsonbin_secrets["api_key"], jsonbin_secrets["bin_id"])
 #    if os.path.isfile(DATA_FILE):
  #       with open(DATA_FILE, "r", encoding="utf-8") as file:
   #          data = json.load(file)
