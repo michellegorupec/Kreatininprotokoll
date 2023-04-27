@@ -8,7 +8,7 @@ Created on Sun Apr  2 12:30:05 2023
 import streamlit as st
 import pandas as pd
 import json, os
-from jsonbin import load_data_jsonbin, save_key
+from jsonbin import load_key, save_key
 
 # jsonbin_secret=st.secrets["jsonbin"]
 
