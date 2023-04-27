@@ -8,12 +8,17 @@ Created on Sun Apr  2 12:30:05 2023
 import streamlit as st
 import pandas as pd
 import json, os
-from jsonbin import load_data_jsonbin, save_data_jsonbin
-jsonbin_secret=st.secrets["jsonbin"]
+from jsonbin import load_data_jsonbin, save_key
+
+# jsonbin_secret=st.secrets["jsonbin"]
+
+jsonbin_secrets = st.secrets["jsonbin"]
+api_key = jsonbin_secrets["api_key"]
+bin_id = jsonbin_secrets["bin_id"]
 
 # Funktion zum Laden der Standards aus einer JSON-Datei
-def load_data():
-    return load_data_jsonbin(jsonbin_secrets["api_key"], jsonbin_secrets["bin_id"])
+# def load_data():
+  #  return load_data_jsonbin(jsonbin_secrets["api_key"], jsonbin_secrets["bin_id"])
 #    if os.path.isfile(DATA_FILE):
  #       with open(DATA_FILE, "r", encoding="utf-8") as file:
   #          data = json.load(file)
@@ -21,6 +26,9 @@ def load_data():
     #    data = []
     #return data
 
+    
+    
+    
 # Funktion zum Speichern der Standards in einer JSON-Datei
 def save_data(data):
     with open(DATA_FILE, "w", encoding="utf-8") as file:
