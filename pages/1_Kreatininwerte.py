@@ -13,7 +13,7 @@ jsonbin_secret=st.secrets["jsonbin"]
 
 # Funktion zum Laden der Standards aus einer JSON-Datei
 def load_data():
-    return load_data_jsonbin(jsonbin_secrets["api_key], jsonbin_secrets["bin_id"])
+    return load_data_jsonbin(jsonbin_secrets["api_key"], jsonbin_secrets["bin_id"])
 #    if os.path.isfile(DATA_FILE):
  #       with open(DATA_FILE, "r", encoding="utf-8") as file:
   #          data = json.load(file)
