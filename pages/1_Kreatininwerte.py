@@ -1,42 +1,43 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr  2 12:30:05 2023
+
+@author: Michelle & Katja
+"""
+
 import streamlit as st
 import pandas as pd
-import json
-import requests
+import json, os
+from jsonbin import load_key, save_key
 
-# JSON-Bin-Konfiguration
-BIN_ID = "<BIN_ID>"
-API_KEY = "<API_KEY>"
-JSONBIN_URL = f"https://api.jsonbin.io/v3/b/{BIN_ID}/latest"
+jsonbin_secrets = st.secrets["jsonbin"]
+api_key = jsonbin_secrets["api_key"]
+bin_id = jsonbin_secrets["bin_id"]
 
-# Funktion zum Laden der Daten
+# Funktion zum Laden der Standards aus einer JSON-Datei
 def load_data():
-    headers = {"X-Master-Key": API_KEY}
-    response = requests.get(JSONBIN_URL, headers=headers)
-
-    if response.status_code == 200:
-        data = response.json().get("record")
-    else:
+  if os.path.isfile(DATA_FILE):
+    with open(DATA_FILE, "r", encoding="utf-8") as file:
+      data = json.load(file)
+      else:
         data = []
-    return data
-
-# Funktion zum Speichern der Daten
+        return data
+     
+# Funktion zum Speichern der Standards in einer JSON-Datei
 def save_data(data):
-    headers = {
-        "Content-Type": "application/json",
-        "X-Master-Key": API_KEY
-    }
-    payload = {"record": data}
-    response = requests.put(JSONBIN_URL, json=payload, headers=headers)
-
-    if response.status_code != 200:
-        st.error("Fehler beim Speichern der Daten")
+    with open(DATA_FILE, "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=2, ensure_ascii=False)
 
 # Seite darstellen
 st.set_page_config(page_title="Kreatinin Bestimmung", page_icon="📊")
 st.markdown("# 📊 Kreatinin Bestimmung")
-st.write("Auf dieser Seite können die Daten erfasst werden.")
+st.write(
+    """
+    Auf dieser Seite können die Daten erfasst werden.
+    """
+)
 
-# Daten aus JSON-Bin laden
+# Daten aus Datei laden
 data = load_data()
 
 # Seite aufbauen
@@ -51,24 +52,27 @@ delete_all_button = st.sidebar.button("Alles löschen")
 # Leere Zeile einfügen (Abstand zwischen Button und Graphen)
 st.write("")
 
-# Einen neuen Eintrag generieren, anhängen und in JSON-Bin schreiben
-if save_button:
+# Einen neuen Eintrag generieren, anhängen und in Datei schreiben
+if save_button == True:
     new_entry = {
         "Datum": str(date), 
         "Kreatinin in mg/dL": creatinine
-    }
+        }
     data.append(new_entry)
     save_data(data)
 
-# Alle Datensätze löschen und in JSON-Bin speichern 
-if delete_all_button:
+# Alle Datensätze löschen und in Datei speichern 
+if delete_all_button == True:
     data = []
     save_data(data)
-
+    
 # Datenframe erzeugen und als Graphen anzeigen. X-Achse ist das Datum.
 df = pd.DataFrame(data)
-chart = st.line_chart(df, x="Datum", use_container_width=True)
+chart = st.line_chart(df, 
+                      x = "Datum", 
+                      use_container_width = True)
 
 # Alle Daten als Liste darstellen
 st.dataframe(df, use_container_width=True)
+
 
