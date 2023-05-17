@@ -1,0 +1,16 @@
+credentials:
+  usernames:
+    michelle:
+      email: gorupmic@students.zhaw.ch
+      name: michelle
+      password: $2b$12$3gEWUI7h94ePlhUkEOyos.4MxewN2ECeIQam6dNr8.f3STR4NA0Um
+    guest:
+      name: guest
+      password: $2b$12$8wGT9/b87P8ctfVXOmg.n.AY0M7eLOM98HTxsOoc1VFckbNKLvq/e
+    katja:
+        name: katja
+        password: $2b$12$ksKu/rjWF9Rjq2Z0TlpMU.SGZWSNLYBl8IWx0bROJOAOku5CvRnia
+cookie:
+  expiry_days: 30  # number of days until password is asked again
+  key: JgDyEoKUNItM5prxo194jDeLYzVzmYE6 # Must be string, use https://randomkeygen.com/
+  name: streamlitcookie
