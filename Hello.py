@@ -1,14 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Apr  2 11:07:53 2023
-
-@author: Michelle & Katja
-"""
-
 import streamlit as st
 import pandas as pd
 from jsonbin import load_key, save_key
-import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 
