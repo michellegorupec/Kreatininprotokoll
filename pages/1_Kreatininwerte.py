@@ -99,11 +99,3 @@ chart = st.line_chart(df, x="date", use_container_width=True)
 
 # Alle Daten als Liste darstellen
 st.dataframe(df, use_container_width=True)
-
-
-# Alle Daten als Liste darstellen
-st.dataframe(df, use_container_width=True)
-
-
-# Alle Daten als Liste darstellen
-st.dataframe(df, use_container_width=True)
