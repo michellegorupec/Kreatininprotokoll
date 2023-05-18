@@ -103,3 +103,7 @@ st.dataframe(df, use_container_width=True)
 
 # Alle Daten als Liste darstellen
 st.dataframe(df, use_container_width=True)
+
+
+# Alle Daten als Liste darstellen
+st.dataframe(df, use_container_width=True)
