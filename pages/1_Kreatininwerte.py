@@ -44,9 +44,9 @@ elif authentication_status == None:
 data = load_key(api_key, bin_id, username)
 
 # Funktion zum Speichern der Standards in einer JSON-Datei
-def save_key(api_key, bin_id, key, data):
-    with open(DATA_FILE, "w", encoding="utf-8") as file:
-        json.dump(data, file, indent=2, ensure_ascii=False)
+#def save_key(api_key, bin_id, key, data):
+ #   with open(DATA_FILE, "w", encoding="utf-8") as file:
+  #      json.dump(data, file, indent=2, ensure_ascii=False)
 
 # Seite darstellen
 st.write(page_title="Kreatinin Bestimmung", page_icon="📊")
