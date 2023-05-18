@@ -49,7 +49,7 @@ def save_key(api_key, bin_id, key, data):
         json.dump(data, file, indent=2, ensure_ascii=False)
 
 # Seite darstellen
-st.set_page_config(page_title="Kreatinin Bestimmung", page_icon="📊")
+st.wirte(page_title="Kreatinin Bestimmung", page_icon="📊")
 st.markdown("# 📊 Kreatinin Bestimmung")
 st.write(
     """
