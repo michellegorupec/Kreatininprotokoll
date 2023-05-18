@@ -94,6 +94,3 @@ chart = st.line_chart(df,
 
 # Alle Daten als Liste darstellen
 st.dataframe(df, use_container_width=True)
-
-df.columns
-    
