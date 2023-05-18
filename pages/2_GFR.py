@@ -76,7 +76,7 @@ def calculate_gfr(age: int, SCr: float, female: bool, darkskinned: bool) -> floa
     
     return round(eGFR, 2)
 
-st.set_page_config(page_title="GFR", page_icon="📈")
+st.write(page_title="GFR", page_icon="📈")
 
 st.markdown("# 📈 GFR")
 st.write(
