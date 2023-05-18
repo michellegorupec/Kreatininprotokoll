@@ -87,10 +87,15 @@ if delete_all_button == True:
     save_key(data)
     
 # Datenframe erzeugen und als Graphen anzeigen. X-Achse ist das Datum.
+#df = pd.DataFrame(data)
+#chart = st.line_chart(df, 
+ #                     x = "Datum", 
+  #                    use_container_width = True)
+  
+# Datenframe erzeugen und als Graphen anzeigen. X-Achse ist das Datum.
 df = pd.DataFrame(data)
-chart = st.line_chart(df, 
-                      x = "Datum", 
-                      use_container_width = True)
+df.rename(columns={"Datum": "date"}, inplace=True)  # Änderung hier
+chart = st.line_chart(df, x="date", use_container_width=True)  # Änderung hier
 
 # Alle Daten als Liste darstellen
 st.dataframe(df, use_container_width=True)
