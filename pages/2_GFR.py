@@ -86,7 +86,7 @@ st.write(
 )
 
 # Daten aus Datei laden
-data = load_key()
+data = load_key(pi_key, bin_id, username)
 
 # Seite aufbauen
 age = st.number_input("Alter (in Jahren)", min_value=1, max_value=100, step=1, value=25)
