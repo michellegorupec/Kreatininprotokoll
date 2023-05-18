@@ -94,8 +94,12 @@ if delete_all_button == True:
   
 # Datenframe erzeugen und als Graphen anzeigen. X-Achse ist das Datum.
 df = pd.DataFrame(data)
-df.rename(columns={"Datum": "date"}, inplace=True)  # Änderung hier
-chart = st.line_chart(df, x="date", use_container_width=True)  # Änderung hier
+df.rename(columns={"Datum": "date", "Kreatinin in mg/dL": "creatinine"}, inplace=True)  # Spaltennamen anpassen
+chart = st.line_chart(df, x="date", use_container_width=True)
+
+# Alle Daten als Liste darstellen
+st.dataframe(df, use_container_width=True)
+
 
 # Alle Daten als Liste darstellen
 st.dataframe(df, use_container_width=True)
