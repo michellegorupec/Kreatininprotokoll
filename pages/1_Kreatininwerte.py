@@ -49,7 +49,7 @@ data = load_key(api_key, bin_id, username)
   #      json.dump(data, file, indent=2, ensure_ascii=False)
 
 # Seite darstellen
-st.write(page_title="Kreatinin Bestimmung", page_icon="📊")
+st.title("Kreatinin Bestimmung")
 st.markdown("# 📊 Kreatinin Bestimmung")
 st.write(
     """
