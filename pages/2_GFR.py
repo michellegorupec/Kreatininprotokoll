@@ -123,4 +123,5 @@ chart = st.line_chart(df_chart,
 
 # Liste darstellen
 st.dataframe(df, use_container_width=True)
-    
+ 
+ st.write(df.columns)
