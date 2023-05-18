@@ -61,7 +61,7 @@ st.write(
 data = load_key(api_key, bin_id, username)
 
 # Seite aufbauen
-creatinine = st.number_input("Kreatinin (in mg/dL)", min_value=0.1, max_value=20.0, step=0.1, key="creatinine")
+creatinine = st.number_input("Kreatinin in in mg/dL", min_value=0.1, max_value=20.0, step=0.1, key="creatinine")
 date = st.date_input("Datum", key="date")
 creatinine_data = {"date": str(date), "value": creatinine}
 save_button = st.button("Speichern")
