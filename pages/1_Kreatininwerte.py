@@ -82,7 +82,7 @@ if save_button == True:
     save_key((api_key, bin_id, username, data)
 
 # Alle Datensätze löschen und in Datei speichern 
-if delete_all_button == True:
+if delete_all_button:
     data = []
     save_key(api_key, bin_id, username, data)
     
