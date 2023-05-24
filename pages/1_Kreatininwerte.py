@@ -80,9 +80,10 @@ if save_button == True:
         }
     data.append(new_entry)
     save_key((api_key, bin_id, username, data)
-
+'''             
 # Alle Datensätze löschen und in Datei speichern 
 if delete_all_button:
+             
     data = []
     save_key(api_key, bin_id, username, data)
     
@@ -100,3 +101,4 @@ chart = st.line_chart(df, x="date", use_container_width=True)
 
 # Alle Daten als Liste darstellen
 #st.dataframe(df, use_container_width=True)
+'''
