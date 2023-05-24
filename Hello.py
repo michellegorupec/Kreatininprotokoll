@@ -5,7 +5,7 @@ import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 
-st.set_page_config(page_title="Test ML und GFR")
+st.set_page_config(page_title="Kreatininwerte und GFR")
 
 # -------- load secrets for jsonbin.io --------
 jsonbin_secrets = st.secrets["jsonbin"]
