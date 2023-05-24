@@ -79,12 +79,12 @@ if save_button == True:
         "Kreatinin in mg/dL": creatinine
         }
     data.append(new_entry)
-    save_key(data)
+    save_key((api_key, bin_id, username, data)
 
 # Alle Datensätze löschen und in Datei speichern 
 if delete_all_button == True:
     data = []
-    save_key(data)
+    save_key(api_key, bin_id, username, data)
     
 # Datenframe erzeugen und als Graphen anzeigen. X-Achse ist das Datum.
 #df = pd.DataFrame(data)
