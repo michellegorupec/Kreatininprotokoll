@@ -95,13 +95,6 @@ df = pd.DataFrame(data)
 chart = st.line_chart(df, 
                       x = "Datum", 
                       use_container_width = True)
-   
-
-# Datenframe erzeugen und als Graphen anzeigen. X-Achse ist das Datum.
-#json1 = load_key(api_key, bin_id, username)
-#df = pd.DataFrame(json1)
-#df.rename(columns={"Datum" : "date", "Kreatinin in mg/dL": "creatinine"}, inplace=True)  # Spaltennamen anpassen
-#chart = st.line_chart(df, x="Datum", use_container_width=True)
 
 # Alle Daten als Liste darstellen
 st.dataframe(df, use_container_width=True)
