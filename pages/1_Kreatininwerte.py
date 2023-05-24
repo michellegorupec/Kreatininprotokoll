@@ -80,6 +80,7 @@ if save_button == True:
         }
     data.append(new_entry)
     save_key((api_key, bin_id, username, data)
+
 '''             
 # Alle Datensätze löschen und in Datei speichern 
 if delete_all_button:
