@@ -98,4 +98,4 @@ df.rename(columns={"Datum": "date", "Kreatinin in mg/dL": "creatinine"}, inplace
 chart = st.line_chart(df, x="date", use_container_width=True)
 
 # Alle Daten als Liste darstellen
-st.dataframe(df, use_container_width=True)
+#st.dataframe(df, use_container_width=True)
