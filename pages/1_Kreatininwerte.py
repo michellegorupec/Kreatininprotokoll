@@ -74,13 +74,14 @@ st.write("")
 
 # Einen neuen Eintrag generieren, anhängen und in Datei schreiben
 if save_button == True:
+    
     new_entry = {
         "Datum": str(date), 
         "Kreatinin in mg/dL": creatinine
         }
     data.append(new_entry)
     save_key((api_key, bin_id, username, data)
-
+             
 '''             
 # Alle Datensätze löschen und in Datei speichern 
 if delete_all_button:
