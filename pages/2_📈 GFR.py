@@ -69,7 +69,6 @@ def calculate_gfr(age: int, SCr: float, female: bool, darkskinned: bool) -> floa
 st.write("Username:  ",st.session_state.username)
    
 st.title("GFR")
-st.markdown("# 📈 GFR")
 st.write(
     """
     Berechnung der GFR
