@@ -61,7 +61,8 @@ st.write(
 data = load_key(api_key, bin_id, username)
 st.write(data)
 #Neu!
-#if data == {}
+if data == {}:
+ data = []
 #############################
 
 
