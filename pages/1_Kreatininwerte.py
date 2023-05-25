@@ -7,15 +7,6 @@ import streamlit_authenticator as stauth
 
 DATA_FILE = "data.json"
 
-# Funktion zum Laden der Standards aus einer JSON-Datei
-# def load_key(api_key, bin_id, key, empty_value=[]):
- #   if os.path.isfile(DATA_FILE):
-  #      with open(DATA_FILE, "r", encoding="utf-8") as file:
-   #         data = json.load(file)
-   # else:
-    #    data = []
-    #return data
-    
 # -------- load secrets for jsonbin.io --------
 jsonbin_secrets = st.secrets["jsonbin"]
 api_key = jsonbin_secrets["api_key"]
@@ -43,11 +34,8 @@ elif authentication_status == None:
     st.stop()
 data = load_key(api_key, bin_id, username)
 
-# Funktion zum Speichern der Standards in einer JSON-Datei
-#def save_key(api_key, bin_id, key, data):
- #   with open(DATA_FILE, "w", encoding="utf-8") as file:
-  #      json.dump(data, file, indent=2, ensure_ascii=False)
 st.write("Username:  ",st.session_state.username)
+
 # Seite darstellen
 st.title("Kreatinin Bestimmung")
 st.markdown("# 📊 Kreatinin Bestimmung")
