@@ -47,7 +47,7 @@ data = load_key(api_key, bin_id, username)
 #def save_key(api_key, bin_id, key, data):
  #   with open(DATA_FILE, "w", encoding="utf-8") as file:
   #      json.dump(data, file, indent=2, ensure_ascii=False)
-
+st.write(st.session_state.username())
 # Seite darstellen
 st.title("Kreatinin Bestimmung")
 st.markdown("# 📊 Kreatinin Bestimmung")
