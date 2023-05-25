@@ -6,16 +6,6 @@ from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 
 DATA_FILE = "data.json"
-
-# Funktion zum Laden der Standards aus einer JSON-Datei
-#def load_key(api_key, bin_id, key, empty_value=[]):
- #   if os.path.isfile(DATA_FILE):
-  #      with open(DATA_FILE, "r", encoding="utf-8") as file:
-   #         data = json.load(file)
-    #else:
-        # Datensatz mit einem Element zurückgeben
-     #   data = []
-    #return data
     
 # -------- load secrets for jsonbin.io --------
 jsonbin_secrets = st.secrets["jsonbin"]
@@ -76,8 +66,9 @@ def calculate_gfr(age: int, SCr: float, female: bool, darkskinned: bool) -> floa
     
     return round(eGFR, 2)
 
+st.write("Username:  ",st.session_state.username)
+   
 st.title("GFR")
-
 st.markdown("# 📈 GFR")
 st.write(
     """
