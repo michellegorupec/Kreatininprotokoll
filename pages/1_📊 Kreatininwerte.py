@@ -37,7 +37,6 @@ data = load_key(api_key, bin_id, username)
 st.write("Username:  ",st.session_state.username)
 
 # Seite darstellen
-st.title("Kreatinin Bestimmung")
 st.markdown("# 📊 Kreatinin Bestimmung")
 st.write(
     """
