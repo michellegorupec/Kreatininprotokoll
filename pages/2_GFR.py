@@ -112,16 +112,13 @@ for SCr in creatinin:
     
 # GFR als neue Spalte anhängen (das wird später als Liste angezeigt)
 df['GFR in ml/min/1.73m²'] = gfr
-#df = pd.DataFrame(df)
 
 # Neues Dataframe für den Graphen vorbereiten und darstellen
 df_chart = pd.DataFrame(df)
-df_chart['Kreatinin in mg/dL']
+#df_chart['Kreatinin in mg/dL']
 chart = st.line_chart(df_chart, 
                       x = 'Datum',
                       use_container_width = True)
 
 # Liste darstellen
 st.dataframe(df, use_container_width=True)
-
-#st.write(df.columns)
