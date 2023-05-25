@@ -100,7 +100,7 @@ st.write(
 )
 
 # Datenframes erzeugen
-#df = pd.DataFrame(data)
+df = pd.DataFrame(data)
 
 # Kreatinin herausholen
 creatinin = df['Kreatinin in mg/dL'].to_numpy()
