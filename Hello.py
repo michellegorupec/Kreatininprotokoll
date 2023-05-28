@@ -44,7 +44,7 @@ st.markdown(
         ## Kreatinin:
         Kreatinin ist ein Abbauprodukt des Kreatinphosphats, das in der Muskulatur gebildet wird. 
         Es spielt eine Hauptrolle im Enegiestoffwechsel der Skelettmuskulatur, vor allem bei kurzzeitiger Muskelarbeit.  
-        Die Konzentration von Kreatinin um Blut ist ein wichtiger Indikator für die Nierenfunktion. 
+        Die Konzentration von Kreatinin im Blut ist ein wichtiger Indikator für die Nierenfunktion. 
         Da die Nieren das Kreatinin aus dem Blut filtrieren und über den Urin ausscheiden.
         
         ### Referenzbereich:
