@@ -68,7 +68,7 @@ def calculate_gfr(age: int, SCr: float, female: bool, darkskinned: bool) -> floa
 
 st.write("Username:  ",st.session_state.username)
    
-st.markdown("# 📈 Kreatinin Bestimmung")
+st.markdown("# 📈 GFR-Rechner")
 st.write(
     """
     Berechnung der GFR
