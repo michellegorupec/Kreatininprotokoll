@@ -106,10 +106,6 @@ df['GFR in ml/min/1.73m²'] = gfr
 # Neues Dataframe für den Graphen vorbereiten und darstellen
 df_chart = df[["Datum",'GFR in ml/min/1.73m²']]
 
-st.write(df_chart)
-#df_chart['Kreatinin in mg/dL']
-
-
 chart = st.line_chart(df_chart, x = 'Datum', use_container_width = True)
 
 # Liste darstellen
