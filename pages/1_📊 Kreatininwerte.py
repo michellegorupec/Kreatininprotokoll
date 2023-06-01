@@ -40,7 +40,8 @@ st.write("Username:  ",st.session_state.username)
 st.markdown("# 📊 Kreatinin Bestimmung")
 st.write(
     """
-    Auf dieser Seite können die Daten erfasst werden.
+    Die Bestimmung von Kreatinin, muss mit dem behandelten Arzt besprochen und bestimmt werden. 
+    Auf dieser Seite können die Daten erfasst werden. 
     """
 )
 
@@ -54,6 +55,7 @@ if data == {}:
 creatinine = st.number_input("Kreatinin in in mg/dL", min_value=0.1, max_value=20.0, step=0.1, key="creatinine")
 date = st.date_input("Datum", key="date")
 creatinine_data = {"date": str(date), "value": creatinine}
+st.write("Bitte drücken sie auf den Button um die Daten anzuzeigen!")
 save_button = st.button("Speichern")
 
 # Sidebar
