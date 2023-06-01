@@ -80,7 +80,7 @@ data = load_key(api_key, bin_id, username)
 
 # Seite aufbauen
 age = st.number_input("Alter (in Jahren)", min_value=1, max_value=100, step=1, value=25)
-gender = st.radio("Geschlecht (biologisch)", ['weiblich', 'mänlich'])
+gender = st.radio("Geschlecht (biologisch)", ['weiblich', 'männlich'])
 skin = st.radio("Hautfarbe", ['hell', 'dunkel'])
 
 st.write(
