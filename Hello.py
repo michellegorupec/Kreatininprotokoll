@@ -72,6 +72,6 @@ st.markdown(
         
         Der normale GFR liegt bei ca. 90 - 120 mL/min, jedoch nimmt dieser ab dem 40. Lebensjahr um etwa 1 mL/min pro Jahr altersbedingt ab.
     
-        👈 Über die Sidebar gelangen Sie zum Kreatinin-Protokoll und zum GFR-Rechner!
+        👈 Über die Sidebar gelangen Sie zum Kreatinin-Protokoll und zum GFR-Rechner! Dort können Sie einfach und bequem Ihre Kreatinin-Werte tracken.
     """
     )
