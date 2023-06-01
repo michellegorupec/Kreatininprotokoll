@@ -40,7 +40,7 @@ st.write("Username:  ",st.session_state.username)
 st.markdown("# 📊 Kreatinin Bestimmung")
 st.write(
     """
-    Die Bestimmung von Kreatinin, muss mit dem behandelten Arzt besprochen und bestimmt werden. 
+    Die Häufigkeit der Kreatinin-Bestimmung muss mit dem behandelten Arzt besprochen werden. 
     Auf dieser Seite können die Daten erfasst werden. 
     """
 )
