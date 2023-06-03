@@ -71,7 +71,7 @@ st.write("Username:  ",st.session_state.username)
 st.markdown("# 📈 GFR-Rechner")
 st.write(
     """
-    Berechnung der GFR
+    Berechnung der GFR. Bitte wählen Sie die passenden Daten.
     """
 )
 
